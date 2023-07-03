@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model MVCCoreDemo.Models.EmployeeData
+
+<h2>Register Employee</h2>
+
+<div style="border:solid thin wheat; padding:30px;width:50%">
+    @using (Html.BeginForm("Add","Employee", FormMethod.Post))
+    {
+
+        //Employee Id
+        <div class="form-group">
+            <div>
+                <label>Employee Id</label>
+            </div>
+            <div>
+                <label>@Html.TextBoxFor(e => e.Employee_id, new { @class = "form-control" })</label>
+            </div>
+        </div>
+
+        //Empolyee Name
+        <div class="form-group">
+            <div>
+                <label>Employee Name</label>
+            </div>
+            <div>
+                <label>@Html.TextBoxFor(e => e.Employee_Name, new { @class = "form-control" })</label>
+            </div>
+        </div>
+
+
+        //Employee Address
+        <div class="form-group">
+            <div>
+                <label>Employee Address</label>
+            </div>
+            <div>
+                <label>@Html.TextBoxFor(e => e.Employee_Address, new { @class = "form-control" })</label>
+            </div>
+        </div>
+
+
+        //Employee Qualification
+        <div class="form-group">
+            <div>
+                <label>Qualification</label>
+            </div>
+            <div>
+                <label>@Html.TextBoxFor(e => e.Qualification, new { @class = "form-control" })</label>
+            </div>
+        </div>
+
+        //Employee Department
+        <div class="form-group">
+            <div>
+                <label>DepartMent</label>
+            </div>
+            <div>
+                @Html.DropDownListFor(e => e.Department_Id, new SelectList(ViewBag.Department, "Department_Id", "Department_Name"), "Choose Prederred Department")
+            </div>
+        </div>
+
+        //Employee Skills
+        <div class="form-group">
+            <div>
+                <label>Skills</label>
+            </div>
+            <div>
+                <label>@Html.TextBoxFor(e => e.SkillsSet, new { @class = "form-control" })</label>
+            </div>
+        </div>
+
+        //submit btn
+        <div>
+            <div><button type="submit" class="btn btn-success">Save Employee Details</button></div>
+        </div>
+    }
+</div>
+
