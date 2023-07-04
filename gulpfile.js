@@ -3,7 +3,7 @@ const Logger = require('fancy-log');
 
 
 
-require('./task/buildproject');
+require('./task/buildproject.js');
 
 
 gulp.task("ApplicationBuild", gulp.series('ApplClean','ApplBuild'), function(done) {
