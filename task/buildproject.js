@@ -2,9 +2,11 @@ var gulp = require("gulp");
 var msbuild = require("gulp-msbuild");
 const Logger = require('fancy-log');
 
+var SourceCode = "D:/build/code/MVCCoreDemo.csproj"
+
 
 gulp.task("ApplClean", function() {
-	return gulp.src('D:\build\code\MVCCoreDemo.csproj' )
+	return gulp.src(SourceCode)
             .pipe(msbuild({
 				toolsVersion: '17.5.1',
                 targets: ['Clean'], //Always do a CLEAN BUILD
@@ -17,7 +19,7 @@ gulp.task("ApplClean", function() {
 });	
 
 gulp.task("ApplBuild", function() {
-	return gulp.src('D:\build\code\MVCCoreDemo.csproj' )
+	return gulp.src(SourceCode)
             .pipe(msbuild({
 				toolsVersion: '17.5.1',
                 targets: ['Build'], //Always do a CLEAN BUILD
