@@ -7,10 +7,10 @@ require('./task/buildproject.js');
 
 
 
-gulp.task("ApplicationBuild", gulp.series('ApplClean','ApplBuild'), function(done) {
+gulp.task("ApplicationBuild", gulp.series('ApplClean','ApplBuild', function(done) {
   Logger.info(LogMessage='build successfull');
   done();
-});	
+}));	
 
 
 
