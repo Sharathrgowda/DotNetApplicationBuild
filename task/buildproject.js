@@ -6,7 +6,7 @@ const Logger = require('fancy-log');
 gulp.task("ApplClean", function() {
 	return gulp.src('D:\build\code\MVCCoreDemo.csproj' )
             .pipe(msbuild({
-				toolsVersion: '4.0.30319',
+				toolsVersion: '17.5.1',
                 targets: ['Clean'], //Always do a CLEAN BUILD
                 properties: { Configuration: 'Release' }
 				
@@ -19,7 +19,7 @@ gulp.task("ApplClean", function() {
 gulp.task("ApplBuild", function() {
 	return gulp.src('D:\build\code\MVCCoreDemo.csproj' )
             .pipe(msbuild({
-				toolsVersion: '4.0.30319',
+				toolsVersion: '17.5.1',
                 targets: ['Build'], //Always do a CLEAN BUILD
                 properties: { Configuration: 'Release' }
 				
