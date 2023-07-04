@@ -10,7 +10,7 @@ gulp.task("ApplClean", function() {
             .pipe(msbuild({
 				toolsVersion: '17.5.1',
                 targets: ['Clean'], //Always do a CLEAN BUILD
-                properties: { Configuration: 'Release' }
+                // properties: { Configuration: 'Release' }
 				
                 })
             )
@@ -23,7 +23,7 @@ gulp.task("ApplBuild", function() {
             .pipe(msbuild({
 				toolsVersion: '17.5.1',
                 targets: ['Build'], //Always do a CLEAN BUILD
-                properties: { Configuration: 'Release' }
+                // properties: { Configuration: 'Release' }
 				
                 })
             )
