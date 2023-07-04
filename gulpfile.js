@@ -4,9 +4,9 @@ const Logger = require('fancy-log');
 
 
 gulp.task("ApplicationBuild", function() {
-	return gulp.src('D:/Newfolder/.NET/ConsoleApp1/ConsoleApp1.sln' )
+	return gulp.src('D:\build\code\MVCCoreDemo.csproj' )
             .pipe(msbuild({
-				toolsVersion: '4.0.30319',
+				toolsVersion: '17.5.1',
                 targets: ['Clean', 'Build'], //Always do a CLEAN BUILD
                 properties: { Configuration: 'Release' }
 				
