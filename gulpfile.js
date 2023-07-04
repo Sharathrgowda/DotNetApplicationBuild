@@ -6,6 +6,7 @@ const Logger = require('fancy-log');
 require('./task/buildproject.js');
 
 
+
 gulp.task("ApplicationBuild", gulp.series('ApplClean','ApplBuild'), function(done) {
   Logger.info(LogMessage='build successfull');
   done();
